@@ -82,13 +82,7 @@ pluginBundle {
             displayName = 'Data4Life Gradle Git-Version'
         }
     }
-allprojects {
-    apply plugin: 'com.palantir.java-format'
+    allprojects {
+        apply plugin: 'com.palantir.java-format'
+    }
 }
-}
-
-// Configure the publishPlugins task
-publishPlugins.onlyIf { System.env.CIRCLE_TAG }
-tasks.publish.dependsOn publishPlugins
-project.ext.'gradle.publish.key' = System.env["GRADLE_KEY"]
-project.ext.'gradle.publish.secret' = System.env["GRADLE_SECRET"]
