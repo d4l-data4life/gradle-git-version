@@ -1,11 +1,5 @@
-<p align="right">
-<a href="https://autorelease.general.dmz.palantir.tech/palantir/gradle-git-version"><img src="https://img.shields.io/badge/Perform%20an-Autorelease-success.svg" alt="Autorelease"></a>
-</p>
-
 Git-Version Gradle Plugin
 =========================
-[![Build Status](https://circleci.com/gh/palantir/gradle-git-version.svg?style=shield)](https://circleci.com/gh/palantir/gradle-git-version)
-[![Gradle Plugins Release](https://img.shields.io/github/release/palantir/gradle-git-version.svg)](https://plugins.gradle.org/plugin/com.palantir.git-version)
 
 When applied, Git-Version adds two methods to the target project.
 
@@ -23,14 +17,14 @@ Apply the plugin using standard Gradle convention:
 **Groovy**
 ```groovy
 plugins {
-    id 'com.palantir.git-version' version '<current version>'
+    id 'care.data4life.git-version' version '<current version>'
 }
 ```
 
 **Kotlin**
 ```kotlin
 plugins {
-    id("com.palantir.git-version") version "<current version>"
+    id("care.data4life.git-version") version "<current version>"
 }
 ```
 
@@ -62,7 +56,7 @@ details.isCleanTag
 
 **Kotlin**
 ```kotlin
-val versionDetails: groovy.lang.Closure<com.palantir.gradle.gitversion.VersionDetails> by extra
+val versionDetails: groovy.lang.Closure<care.data4life.gradle.gitversion.VersionDetails> by extra
 val details = versionDetails()
 details.lastTag
 details.commitDistance
