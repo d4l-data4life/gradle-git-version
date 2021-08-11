@@ -31,8 +31,6 @@ public final class GitVersionPlugin implements Plugin<Project> {
 
     @Override
     public void apply(final Project project) {
-        project.getRootProject().getPluginManager().apply(GitVersionRootPlugin.class);
-
         final Git git = gitRepo(project);
 
         // intentionally not using .getExtension() here for back-compat
